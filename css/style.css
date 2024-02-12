@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --light-Cyan: hsl(193, 38%, 86%);
+    --neon--green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-Blue: hsl(218, 23%, 16%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--dark-Blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: .7rem;
+    color: var(--neon--green);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 2rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 7.5rem auto;
+    padding: 2.5rem 1.5rem;
+    background: var(--dark-grayish-blue);
+    border-radius: .75rem;
+}
+
+p {
+    color: var(--light-Cyan);
+    margin-bottom: 1.375rem;
+    font-size: 1.4rem;
+}
+
+.button {
+    position: relative;
+    top: 0;
+    padding-top: 1.25rem;
+}
+
+.btn {
+    cursor: pointer;
+    position: absolute;
+    top: 1.6875rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4.125rem;
+    height: 4.125rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--neon--green);
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1.5625rem var(--neon--green);
+}
+
+@media(min-width: 500px) {
+    .main {
+        width: 100%;
+        max-width: 542px;
+        padding: 3.25rem;
+        transform: translateY(104px);
+    }
+
+    p {
+        font-size: 1.7rem;
+        margin-bottom: 2.6rem;
+    }
+
+    h1 {
+        font-size: .8rem;
+        margin-bottom: 1.5rem;
+        margin-top: -5px;
+    }
+
+    .btn {
+        top: 2.2rem
+    }
+}
+
+.footer {
+    display: block;
+    margin-top: 10rem;
+    padding: 2rem;
+    text-align: center;
+    background: var(--dark-grayish-blue);
+    margin-bottom: 0;
+    color: #fff;
+}
+
+
+a {
+    color: #fff;
+    transition: color 300ms ease;
+}
+
+a:hover {
+    color: var(--dark-Blue);
+}
